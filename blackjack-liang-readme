@@ -1,0 +1,30 @@
+***Identity Code Smells
+1. Long Method
+	a. Game#Play()
+	b. Deck#Deck()
+
+2. Primitive Obsession
+	a. Deck#Deck()
+	b. Game#PlayerWins()
+
+3. Feature Envy
+	a. Game#drawCardIntoPlayerHand()
+	b. Game#handleGameOutcome()
+
+
+***Extract Player Class
+
+what methods are now more easily testable?
+— playerBets(), playerWins(), playerLoses(), etc.
+— added 5 tests in the PlayerTest class
+
+***Record Yourself and Take Notice
+1. Add New Behavior (not done yet)
+2. Change Existing Behavior (not done yet)
+
+
+
+
+**** link to Liang Xie’s GitHub repo
+
+https://github.com/xieliang2003bb/blackjack-mycmt-ebp-kr
