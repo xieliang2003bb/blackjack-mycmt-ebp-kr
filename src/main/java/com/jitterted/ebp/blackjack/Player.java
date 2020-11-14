@@ -17,6 +17,10 @@ public class Player {
     return playerBalance;
   }
 
+  public int playerBetAmount() {
+    return playerBet;
+  }
+
   public void playerWins() {
     playerBalance += playerBet * 2;
   }
