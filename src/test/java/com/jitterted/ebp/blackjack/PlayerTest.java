@@ -60,4 +60,13 @@ class PlayerTest {
             .isEqualTo(20);
   }
 
+  @Test
+  public void testTotalAmountBet() throws Exception {
+    Player player = new Player(100);
+    player.playerBets(20);
+    player.playerBets(100);
+    assertThat(player.getTotalAmountBet())
+            .isEqualTo(120);  // 100+20 = 120
+  }
+
 }
