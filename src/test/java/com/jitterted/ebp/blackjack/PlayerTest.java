@@ -51,7 +51,7 @@ class PlayerTest {
 
   @Test
   public void testPlayerDeposits() throws Exception {
-    Player player = new Player(100);
+    Player player = new Player(300);
     player.playerBets(20);
     player.playerDeposits(100);
     assertThat(player.playerBalance())
@@ -62,11 +62,22 @@ class PlayerTest {
 
   @Test
   public void testTotalAmountBet() throws Exception {
+    Player player = new Player(200);
+    player.playerBets(20);
+    player.playerBets(100);
+    assertThat(player.getTotalAmountBet())
+            .isEqualTo(120);  // 100+20 = 120
+    assertThat(player.playerBalance())
+            .isEqualTo(90);  // 200-20-100+10 = 90
+  }
+
+  @Test
+  public void testBonusBetOver100() throws Exception {
     Player player = new Player(100);
     player.playerBets(20);
     player.playerBets(100);
     assertThat(player.getTotalAmountBet())
             .isEqualTo(120);  // 100+20 = 120
-  }
 
+  }
 }

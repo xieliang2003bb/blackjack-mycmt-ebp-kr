@@ -13,6 +13,9 @@ public class Player {
     playerBet = betAmount;
     playerBalance -= betAmount;
     totalAmountBet += playerBet;
+    if (betAmount >= 100) {
+      playerBalance += 10;
+    }
   }
 
   public int playerBalance() {
