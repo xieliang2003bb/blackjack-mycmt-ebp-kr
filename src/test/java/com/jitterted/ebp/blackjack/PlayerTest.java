@@ -61,7 +61,7 @@ class PlayerTest {
   }
 
   @Test
-  public void testTotalAmountBet() throws Exception {
+  public void testBonusBetOver100() throws Exception {
     Player player = new Player(200);
     player.playerBets(20);
     player.playerBets(100);
@@ -72,7 +72,7 @@ class PlayerTest {
   }
 
   @Test
-  public void testBonusBetOver100() throws Exception {
+  public void testTotallAmountBet() throws Exception {
     Player player = new Player(100);
     player.playerBets(20);
     player.playerBets(100);
